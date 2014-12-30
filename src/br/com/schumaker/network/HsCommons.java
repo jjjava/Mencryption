@@ -4,6 +4,7 @@ package br.com.schumaker.network;
 /**
  *
  * @author hudson schumaker
+ * Client
  */
 public class HsCommons {
 

@@ -42,7 +42,6 @@ public class ServiceLocator implements Runnable {
                 server = server.trim();
                 String aux[] = server.split(";");
                 Engine.getInstance().setServer(aux[1]);
-                System.err.println(server.trim());
                 
                 dsocket.close();
             }

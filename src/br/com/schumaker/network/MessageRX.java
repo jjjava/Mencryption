@@ -20,10 +20,9 @@ public class MessageRX {
         } catch (Exception e) {
             System.err.println("MessageRX:\n" + e);
         }
-        while (isRun()) {
+        while (run) {
             try {
                 incoming = server.accept();
-               // System.out.println("Client IP: " + incoming.getInetAddress());
                 new MessageRxSession(incoming).start();
             } catch (Exception e) {
                 System.err.println("MessageRX2:\n" + e);
