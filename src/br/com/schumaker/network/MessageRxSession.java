@@ -31,7 +31,6 @@ public class MessageRxSession extends Thread {
             DataInputStream dis = new DataInputStream(inps);
             PrintWriter out = new PrintWriter(outs, true);
             String line = dis.readUTF();
-            System.out.println(line);
             tramsmit(line);
             inps.close();
             outs.close();

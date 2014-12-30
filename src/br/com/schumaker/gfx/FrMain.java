@@ -22,6 +22,7 @@ public class FrMain extends javax.swing.JFrame {
     public void setMessage(String sms) {
         jTextArea.append(sms);
         jTextArea.append("\n");
+        jTextArea.setCaretPosition(jTextArea.getDocument().getLength());
     }
 
     public void addToList(String s) {
@@ -56,6 +57,7 @@ public class FrMain extends javax.swing.JFrame {
         jSplitPane1.setLeftComponent(jScrollPane1);
 
         jTextArea.setColumns(20);
+        jTextArea.setLineWrap(true);
         jTextArea.setRows(5);
         jScrollPane2.setViewportView(jTextArea);
 
