@@ -15,7 +15,7 @@ public class MessageRX {
 
     public MessageRX() {
         try {
-            server = new ServerSocket(HsCommons.TXPORT);
+            server = new ServerSocket(HsCommons.RXPORT);
             run = true;
         } catch (Exception e) {
             System.err.println("MessageRX:\n" + e);

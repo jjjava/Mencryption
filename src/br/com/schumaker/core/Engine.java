@@ -52,6 +52,10 @@ public class Engine implements Runnable {
             System.out.println(exc.toString());
         }
     }
+    
+    public void scanServer(){
+        new ServiceLocator().start();
+    }
 
     public String getServer() {
         return server;
