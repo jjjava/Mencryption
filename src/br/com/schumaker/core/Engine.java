@@ -58,6 +58,7 @@ public class Engine implements Runnable {
     }
 
     public void setServer(String server) {
+        frame.setTitle("Server: "+server);
         this.server = server;
     }
 
