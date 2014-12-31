@@ -2,6 +2,7 @@ package br.com.schumaker.core;
 
 import br.com.schumaker.gfx.FrMain;
 import br.com.schumaker.network.HsCommons;
+import br.com.schumaker.network.KeepMe;
 import br.com.schumaker.network.MessageRX;
 import br.com.schumaker.network.ServiceLocator;
 import java.io.DataOutputStream;
@@ -9,7 +10,7 @@ import java.net.Socket;
 
 /**
  *
- * @author hudson schumaker
+ * @author hudson schumaker Client
  */
 public class Engine implements Runnable {
 
@@ -33,6 +34,7 @@ public class Engine implements Runnable {
     @Override
     public void run() {
         new ServiceLocator().start();
+        new KeepMe().start();
         new MessageRX();
     }
 
@@ -52,8 +54,8 @@ public class Engine implements Runnable {
             System.out.println(exc.toString());
         }
     }
-    
-    public void scanServer(){
+
+    public void scanServer() {
         new ServiceLocator().start();
     }
 
@@ -62,7 +64,7 @@ public class Engine implements Runnable {
     }
 
     public void setServer(String server) {
-        frame.setTitle("Server: "+server);
+        frame.setTitle("Server: " + server);
         this.server = server;
     }
 
