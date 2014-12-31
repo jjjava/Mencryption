@@ -5,6 +5,7 @@ import br.com.schumaker.network.HsCommons;
 import br.com.schumaker.network.KeepMe;
 import br.com.schumaker.network.MessageRX;
 import br.com.schumaker.network.ServiceLocator;
+import br.com.schumaker.util.HsDateTime;
 import java.io.DataOutputStream;
 import java.net.Socket;
 
@@ -69,6 +70,6 @@ public class Engine implements Runnable {
     }
 
     public void setMessage(String esms) {
-        frame.setMessage(Encryption.decrypt(esms));
+        frame.setMessage(HsDateTime.getHHMMSS()+"  "+(Encryption.decrypt(esms)));
     }
 }
